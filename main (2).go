@@ -1,37 +1,45 @@
 package main
-import ("fmt"
-	"math/rand"
-	"time")
 
-func sieve(n int) {
-
-	var i int
-	var prime []int
-	
-	for (i = 0; i <= n; i++){
-		prime[i] = true
-	}
-	for (k := 2; k*k <= n; k++){
-		if prime[i] == true {
-			for (p:= k*k; p <= n; p += k){
-				prime[i] = false	
-			}
-		}
-	}
-	for (i = 2; i <= n; i++){
-		if (prime[i] == true){
-			fmt.Print(i)
-		}
-	}
-	
-	
-}
-
+import "fmt"
 
 func main() {
-	var num int
-	fmt.Println("Enter number: ")
-	fmt.Scanf("%d",&num)
-	sieve(num)
+
+	var letter string
+	
+	fmt.Println("Enter letter grade: ")
+	fmt.Scanf("%s",&letter)
+	
+	runes := []rune(letter)
+	sub1 := string(runes[0:1])
+	sub2 := string(runes[1:2])
+	
+	if sub2 == "+" {
+		add := 0.3
+	}else{
+	if sub2 == "-" {
+		add := -0.3
+	}}else{
+	num := 0
+	}
+	
+	if sub1 == "A" {
+		num := 4
+	}else{
+	if sub1 == "B" {
+		num := 3
+	}else{
+	if sub1 == "C" {
+		num := 2
+	}else{
+	if sub1 == "D" {
+		num := 1
+	}else{
+	if sub1 == "F" {
+		num := 0	
+		add := 0
+	}
+	
+	fmt.Println("Number grade: ")
+	fmt.Print(num + add)
 
 }
